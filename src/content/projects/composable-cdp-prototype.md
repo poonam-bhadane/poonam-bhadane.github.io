@@ -1,6 +1,6 @@
 ---
-title: "Composable CDP: architecture and audience builder"
-summary: "A design prototype showing how a composable CDP turns raw customer events into marketing audiences, with an interactive audience builder that shows the generated definition, SQL and buy-versus-build plan."
+title: "Composable CDP: Architecture and Audience Builder"
+summary: "A design Prototype showing how a Composable CDP turns raw customer events into Marketing Audiences, with an interactive Audience Builder that shows the generated definition, SQL and buy-versus-build plan."
 status: design
 order: 3
 tags: ["Composable CDP", "Architecture", "Audience building", "Kafka", "Flink", "Reverse-ETL"]
