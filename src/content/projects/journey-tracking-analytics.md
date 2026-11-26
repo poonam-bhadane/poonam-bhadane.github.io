@@ -1,6 +1,6 @@
 ---
-title: "Customer journey tracking and web analytics"
-summary: "A consumer-finance demo website instrumented with Google Tag Manager and GA4 to track every touchpoint, with a custom KPI dashboard fed from the GA4 Data API."
+title: "Customer Journey Tracking and Web Analytics"
+summary: "A Consumer-Finance demo website instrumented with Google Tag Manager and GA4 to track every touchpoint, with a custom KPI dashboard fed from the GA4 Data API."
 status: live
 order: 2
 tags: ["GA4", "Google Tag Manager", "Web analytics", "AWS S3 + CloudFront", "Python"]
