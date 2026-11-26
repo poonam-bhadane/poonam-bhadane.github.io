@@ -15,5 +15,5 @@ const href = direct
   <h3>{project.data.title}</h3>
   <p>{project.data.summary}</p>
   <div class="tags">{project.data.tags.map((t) => <span class="tag">{t}</span>)}</div>
-  <span class="more">{direct ? 'Open the prototype →' : 'View project →'}</span>
+  <span class="more">{direct ? (d.status === 'live' ? 'Open live site →' : 'Open the prototype →') : 'View project →'}</span>
 </a>
