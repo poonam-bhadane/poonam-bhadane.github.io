@@ -3,7 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 interface Props { project: CollectionEntry<'projects'>; }
 const { project } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const labels = { live: 'Live', prototype: 'Working prototype', design: 'Design and documentation' } as const;
+const labels = { live: 'Live', Prototype: 'Working Prototype', design: 'Concept Design and Documentation' } as const;
 const d = project.data;
 const direct = d.directLink && d.live;
 const href = direct
