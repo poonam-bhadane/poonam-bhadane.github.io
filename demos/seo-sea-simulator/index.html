@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO/SEA Search Simulator — Pet Food Store</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>SEO / SEA Search Simulator</h1>
+      <p class="tagline">
+        A transparent, in-browser model of the Google Search auction (paid) and
+        organic ranking, for a fictional pet-food store. All synthetic.
+      </p>
+    </header>
+
+    <section class="searchbar">
+      <input id="query" type="text" placeholder="Try: grain free dog food" />
+      <button id="searchBtn">Search</button>
+      <button id="resetBtn" class="secondary">Reset data</button>
+    </section>
+
+    <main class="layout">
+      <!-- Left: the simulated SERP -->
+      <div class="serp">
+        <p class="serp-note">
+          Results for: <b id="queryEcho">—</b>
+        </p>
+
+        <h2 class="section-title paid">Sponsored — paid ads (ranked by Ad Rank)</h2>
+        <div id="ads" class="results"></div>
+
+        <h2 class="section-title organic-title">
+          Organic results (ranked by SEO score)
+        </h2>
+        <div id="organic" class="results"></div>
+      </div>
+
+      <!-- Right: editable inputs -->
+      <aside class="controls">
+        <h3>Advertisers (paid auction)</h3>
+        <p class="hint">
+          Change a bid or Quality Score input and watch positions and CPC update
+          live. Try giving a low bidder a high Quality Score.
+        </p>
+        <div id="advEditor"></div>
+
+        <h3>Organic pages (SEO)</h3>
+        <p class="hint">
+          Toggle "Indexable" off to see a strong page crash to zero. Lower an
+          LCP to speed a page up.
+        </p>
+        <div id="pageEditor"></div>
+      </aside>
+    </main>
+
+    <footer class="foot">
+      <p>
+        Educational simulator. Formulas are simplified models documented in
+        <code>../docs/</code>, not Google's real algorithms.
+      </p>
+    </footer>
+
+    <!-- Load order matters: engines + data before app.js -->
+    <script src="src/auction.js"></script>
+    <script src="src/seo.js"></script>
+    <script src="src/data.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
