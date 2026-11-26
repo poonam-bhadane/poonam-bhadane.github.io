@@ -1,6 +1,6 @@
 ---
-title: "How does a marketer's idea become an audience? I built a prototype to find out"
-description: "I don't have a production CDP to show my work, so I built a prototype of the part most platforms hide: how someone describes an audience, and how the system turns that into running jobs."
+title: "How does a Marketer's idea become an Audience? I built a Prototype to find out"
+description: "I don't have a production CDP to show my work, so I built a Prototype of the part most platforms hide: how someone describes an Audience, and how the system turns that into running jobs."
 pubDate: 2026-09-22
 tags: ["Composable CDP", "Audience building", "Architecture", "Buy vs build"]
 draft: false
