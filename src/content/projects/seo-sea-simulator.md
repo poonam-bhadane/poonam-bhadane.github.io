@@ -1,5 +1,5 @@
 ---
-title: "SEO and SEA search simulator"
+title: "SEO and SEA Search Simulator"
 summary: "A learning project: an in-browser simulator of the Google Ads auction and organic ranking, with readable formulas for Quality Score, Ad Rank, cost per click and an SEO score."
 status: prototype
 order: 6
