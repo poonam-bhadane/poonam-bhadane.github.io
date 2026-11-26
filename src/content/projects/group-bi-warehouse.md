@@ -1,6 +1,6 @@
 ---
-title: "Unified BI and group reporting for a manufacturing group"
-summary: "A prototype that takes fragmented data from three subsidiaries of a fictional manufacturing group and turns it into one uniform database with standardised reporting and an interactive dashboard."
+title: "Unified BI and Group Reporting for a Manufacturing Group"
+summary: "A Prototype that takes fragmented data from three subsidiaries of a fictional manufacturing group and turns it into one uniform database with standardised reporting and an interactive dashboard."
 status: prototype
 order: 4
 tags: ["SQL", "Data modelling", "ETL", "KPI design", "Dashboards"]
