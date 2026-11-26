@@ -1,0 +1,583 @@
+{
+  "generated_at": "2026-09-28T10:54:01",
+  "group_name": "Rheinwerk Group",
+  "currency": "EUR",
+  "build_stats": {
+    "companies": 3,
+    "customers": 28,
+    "products": 33,
+    "sales_lines": 365,
+    "production_lines": 315,
+    "shared_accounts": 3
+  },
+  "summary": {
+    "total_revenue_eur": 11083997.0,
+    "total_margin_eur": 5429252.0,
+    "gross_margin_pct": 49.0,
+    "order_lines": 365,
+    "active_customers": 19,
+    "open_backlog_eur": 94213.0,
+    "otif_pct": 80.7
+  },
+  "revenue_by_company": [
+    {
+      "company_code": "PW",
+      "company_name": "PolymerWerk AG",
+      "revenue_eur": 7062479.0,
+      "margin_eur": 3524760.0,
+      "margin_pct": 49.9,
+      "order_lines": 130,
+      "otif_pct": 84.4
+    },
+    {
+      "company_code": "MT",
+      "company_name": "MetallTech GmbH",
+      "revenue_eur": 2114797.0,
+      "margin_eur": 915648.0,
+      "margin_pct": 43.3,
+      "order_lines": 140,
+      "otif_pct": 78.4
+    },
+    {
+      "company_code": "EB",
+      "company_name": "ElektroBauteile AG",
+      "revenue_eur": 1906721.0,
+      "margin_eur": 988843.0,
+      "margin_pct": 51.9,
+      "order_lines": 95,
+      "otif_pct": 79.1
+    }
+  ],
+  "revenue_by_month": [
+    {
+      "year_month": "2024-01",
+      "company_code": "EB",
+      "revenue_eur": 42635.0,
+      "margin_eur": 21671.0
+    },
+    {
+      "year_month": "2024-01",
+      "company_code": "MT",
+      "revenue_eur": 107053.0,
+      "margin_eur": 46694.0
+    },
+    {
+      "year_month": "2024-01",
+      "company_code": "PW",
+      "revenue_eur": 308037.0,
+      "margin_eur": 149556.0
+    },
+    {
+      "year_month": "2024-02",
+      "company_code": "EB",
+      "revenue_eur": 44333.0,
+      "margin_eur": 22899.0
+    },
+    {
+      "year_month": "2024-02",
+      "company_code": "MT",
+      "revenue_eur": 60890.0,
+      "margin_eur": 22840.0
+    },
+    {
+      "year_month": "2024-02",
+      "company_code": "PW",
+      "revenue_eur": 571172.0,
+      "margin_eur": 250498.0
+    },
+    {
+      "year_month": "2024-03",
+      "company_code": "EB",
+      "revenue_eur": 110187.0,
+      "margin_eur": 57145.0
+    },
+    {
+      "year_month": "2024-03",
+      "company_code": "MT",
+      "revenue_eur": 101577.0,
+      "margin_eur": 44414.0
+    },
+    {
+      "year_month": "2024-03",
+      "company_code": "PW",
+      "revenue_eur": 615750.0,
+      "margin_eur": 318402.0
+    },
+    {
+      "year_month": "2024-04",
+      "company_code": "EB",
+      "revenue_eur": 85048.0,
+      "margin_eur": 44964.0
+    },
+    {
+      "year_month": "2024-04",
+      "company_code": "MT",
+      "revenue_eur": 71762.0,
+      "margin_eur": 28424.0
+    },
+    {
+      "year_month": "2024-04",
+      "company_code": "PW",
+      "revenue_eur": 156340.0,
+      "margin_eur": 86309.0
+    },
+    {
+      "year_month": "2024-05",
+      "company_code": "EB",
+      "revenue_eur": 160322.0,
+      "margin_eur": 84989.0
+    },
+    {
+      "year_month": "2024-05",
+      "company_code": "MT",
+      "revenue_eur": 112980.0,
+      "margin_eur": 49240.0
+    },
+    {
+      "year_month": "2024-05",
+      "company_code": "PW",
+      "revenue_eur": 89801.0,
+      "margin_eur": 42451.0
+    },
+    {
+      "year_month": "2024-06",
+      "company_code": "EB",
+      "revenue_eur": 152768.0,
+      "margin_eur": 80747.0
+    },
+    {
+      "year_month": "2024-06",
+      "company_code": "MT",
+      "revenue_eur": 122967.0,
+      "margin_eur": 54792.0
+    },
+    {
+      "year_month": "2024-06",
+      "company_code": "PW",
+      "revenue_eur": 551489.0,
+      "margin_eur": 297017.0
+    },
+    {
+      "year_month": "2024-07",
+      "company_code": "EB",
+      "revenue_eur": 48646.0,
+      "margin_eur": 25242.0
+    },
+    {
+      "year_month": "2024-07",
+      "company_code": "MT",
+      "revenue_eur": 90436.0,
+      "margin_eur": 37286.0
+    },
+    {
+      "year_month": "2024-07",
+      "company_code": "PW",
+      "revenue_eur": 103209.0,
+      "margin_eur": 56033.0
+    },
+    {
+      "year_month": "2024-08",
+      "company_code": "EB",
+      "revenue_eur": 54773.0,
+      "margin_eur": 27597.0
+    },
+    {
+      "year_month": "2024-08",
+      "company_code": "MT",
+      "revenue_eur": 77809.0,
+      "margin_eur": 35798.0
+    },
+    {
+      "year_month": "2024-08",
+      "company_code": "PW",
+      "revenue_eur": 280851.0,
+      "margin_eur": 145649.0
+    },
+    {
+      "year_month": "2024-09",
+      "company_code": "EB",
+      "revenue_eur": 193888.0,
+      "margin_eur": 100300.0
+    },
+    {
+      "year_month": "2024-09",
+      "company_code": "MT",
+      "revenue_eur": 145189.0,
+      "margin_eur": 68072.0
+    },
+    {
+      "year_month": "2024-09",
+      "company_code": "PW",
+      "revenue_eur": 327280.0,
+      "margin_eur": 172640.0
+    },
+    {
+      "year_month": "2024-10",
+      "company_code": "EB",
+      "revenue_eur": 158606.0,
+      "margin_eur": 83204.0
+    },
+    {
+      "year_month": "2024-10",
+      "company_code": "MT",
+      "revenue_eur": 121267.0,
+      "margin_eur": 52654.0
+    },
+    {
+      "year_month": "2024-10",
+      "company_code": "PW",
+      "revenue_eur": 662300.0,
+      "margin_eur": 352412.0
+    },
+    {
+      "year_month": "2024-11",
+      "company_code": "EB",
+      "revenue_eur": 171899.0,
+      "margin_eur": 88316.0
+    },
+    {
+      "year_month": "2024-11",
+      "company_code": "MT",
+      "revenue_eur": 143087.0,
+      "margin_eur": 63851.0
+    },
+    {
+      "year_month": "2024-11",
+      "company_code": "PW",
+      "revenue_eur": 571362.0,
+      "margin_eur": 289316.0
+    },
+    {
+      "year_month": "2024-12",
+      "company_code": "EB",
+      "revenue_eur": 71333.0,
+      "margin_eur": 35747.0
+    },
+    {
+      "year_month": "2024-12",
+      "company_code": "MT",
+      "revenue_eur": 59330.0,
+      "margin_eur": 25724.0
+    },
+    {
+      "year_month": "2024-12",
+      "company_code": "PW",
+      "revenue_eur": 45712.0,
+      "margin_eur": 24874.0
+    },
+    {
+      "year_month": "2025-01",
+      "company_code": "EB",
+      "revenue_eur": 201180.0,
+      "margin_eur": 104560.0
+    },
+    {
+      "year_month": "2025-01",
+      "company_code": "MT",
+      "revenue_eur": 107350.0,
+      "margin_eur": 47960.0
+    },
+    {
+      "year_month": "2025-01",
+      "company_code": "PW",
+      "revenue_eur": 499185.0,
+      "margin_eur": 204030.0
+    },
+    {
+      "year_month": "2025-02",
+      "company_code": "EB",
+      "revenue_eur": 39012.0,
+      "margin_eur": 19084.0
+    },
+    {
+      "year_month": "2025-02",
+      "company_code": "MT",
+      "revenue_eur": 55560.0,
+      "margin_eur": 27208.0
+    },
+    {
+      "year_month": "2025-02",
+      "company_code": "PW",
+      "revenue_eur": 321350.0,
+      "margin_eur": 151385.0
+    },
+    {
+      "year_month": "2025-03",
+      "company_code": "EB",
+      "revenue_eur": 49862.0,
+      "margin_eur": 25870.0
+    },
+    {
+      "year_month": "2025-03",
+      "company_code": "MT",
+      "revenue_eur": 146437.0,
+      "margin_eur": 59797.0
+    },
+    {
+      "year_month": "2025-03",
+      "company_code": "PW",
+      "revenue_eur": 311776.0,
+      "margin_eur": 166730.0
+    },
+    {
+      "year_month": "2025-04",
+      "company_code": "EB",
+      "revenue_eur": 31862.0,
+      "margin_eur": 16208.0
+    },
+    {
+      "year_month": "2025-04",
+      "company_code": "MT",
+      "revenue_eur": 134740.0,
+      "margin_eur": 60994.0
+    },
+    {
+      "year_month": "2025-04",
+      "company_code": "PW",
+      "revenue_eur": 322870.0,
+      "margin_eur": 160311.0
+    },
+    {
+      "year_month": "2025-05",
+      "company_code": "EB",
+      "revenue_eur": 66805.0,
+      "margin_eur": 33999.0
+    },
+    {
+      "year_month": "2025-05",
+      "company_code": "MT",
+      "revenue_eur": 179743.0,
+      "margin_eur": 75345.0
+    },
+    {
+      "year_month": "2025-05",
+      "company_code": "PW",
+      "revenue_eur": 412971.0,
+      "margin_eur": 197220.0
+    },
+    {
+      "year_month": "2025-06",
+      "company_code": "EB",
+      "revenue_eur": 94902.0,
+      "margin_eur": 49242.0
+    },
+    {
+      "year_month": "2025-06",
+      "company_code": "MT",
+      "revenue_eur": 62663.0,
+      "margin_eur": 27015.0
+    },
+    {
+      "year_month": "2025-06",
+      "company_code": "PW",
+      "revenue_eur": 448770.0,
+      "margin_eur": 235498.0
+    },
+    {
+      "year_month": "2025-07",
+      "company_code": "EB",
+      "revenue_eur": 73786.0,
+      "margin_eur": 39137.0
+    },
+    {
+      "year_month": "2025-07",
+      "company_code": "MT",
+      "revenue_eur": 102424.0,
+      "margin_eur": 39457.0
+    },
+    {
+      "year_month": "2025-07",
+      "company_code": "PW",
+      "revenue_eur": 258251.0,
+      "margin_eur": 134004.0
+    },
+    {
+      "year_month": "2025-08",
+      "company_code": "EB",
+      "revenue_eur": 54872.0,
+      "margin_eur": 27923.0
+    },
+    {
+      "year_month": "2025-08",
+      "company_code": "MT",
+      "revenue_eur": 111534.0,
+      "margin_eur": 48082.0
+    },
+    {
+      "year_month": "2025-08",
+      "company_code": "PW",
+      "revenue_eur": 204003.0,
+      "margin_eur": 90426.0
+    }
+  ],
+  "revenue_by_product_line": [
+    {
+      "product_line": "Molded Parts",
+      "revenue_eur": 4316654.0,
+      "margin_eur": 2321564.0,
+      "units_sold": 128903
+    },
+    {
+      "product_line": "Assemblies",
+      "revenue_eur": 2424562.0,
+      "margin_eur": 1005809.0,
+      "units_sold": 77500
+    },
+    {
+      "product_line": "Electronics",
+      "revenue_eur": 1657927.0,
+      "margin_eur": 861221.0,
+      "units_sold": 58269
+    },
+    {
+      "product_line": "Machined Parts",
+      "revenue_eur": 1519040.0,
+      "margin_eur": 627590.0,
+      "units_sold": 26107
+    },
+    {
+      "product_line": "Custom Parts",
+      "revenue_eur": 1165813.0,
+      "margin_eur": 613068.0,
+      "units_sold": 19922
+    }
+  ],
+  "otif_by_company": [
+    {
+      "company_code": "PW",
+      "company_name": "PolymerWerk AG",
+      "delivered_lines": 128,
+      "otif_lines": 108,
+      "otif_pct": 84.4
+    },
+    {
+      "company_code": "EB",
+      "company_name": "ElektroBauteile AG",
+      "delivered_lines": 91,
+      "otif_lines": 72,
+      "otif_pct": 79.1
+    },
+    {
+      "company_code": "MT",
+      "company_name": "MetallTech GmbH",
+      "delivered_lines": 139,
+      "otif_lines": 109,
+      "otif_pct": 78.4
+    }
+  ],
+  "production_vs_plan": [
+    {
+      "company_code": "PW",
+      "company_name": "PolymerWerk AG",
+      "planned_qty": 278840,
+      "actual_qty": 273526,
+      "plan_attainment_pct": 98.1
+    },
+    {
+      "company_code": "MT",
+      "company_name": "MetallTech GmbH",
+      "planned_qty": 54361,
+      "actual_qty": 52010,
+      "plan_attainment_pct": 95.7
+    },
+    {
+      "company_code": "EB",
+      "company_name": "ElektroBauteile AG",
+      "planned_qty": 103445,
+      "actual_qty": 96097,
+      "plan_attainment_pct": 92.9
+    }
+  ],
+  "top_customers": [
+    {
+      "group_customer_id": "GC-0003",
+      "customer_name": "NordLogistik GmbH",
+      "is_shared_account": 1,
+      "subsidiaries_traded_with": 1,
+      "revenue_eur": 1285076.0
+    },
+    {
+      "group_customer_id": "GC-0012",
+      "customer_name": "PlasticSystems Ltd",
+      "is_shared_account": 0,
+      "subsidiaries_traded_with": 1,
+      "revenue_eur": 1201291.0
+    },
+    {
+      "group_customer_id": "GC-0013",
+      "customer_name": "FormSolutions Ltd",
+      "is_shared_account": 0,
+      "subsidiaries_traded_with": 1,
+      "revenue_eur": 1139206.0
+    },
+    {
+      "group_customer_id": "GC-0014",
+      "customer_name": "TechWorks Ltd",
+      "is_shared_account": 0,
+      "subsidiaries_traded_with": 1,
+      "revenue_eur": 834995.0
+    },
+    {
+      "group_customer_id": "GC-0011",
+      "customer_name": "PlasticWorks Ltd",
+      "is_shared_account": 0,
+      "subsidiaries_traded_with": 1,
+      "revenue_eur": 777109.0
+    },
+    {
+      "group_customer_id": "GC-0015",
+      "customer_name": "PlasticSolutions Ltd",
+      "is_shared_account": 0,
+      "subsidiaries_traded_with": 1,
+      "revenue_eur": 747167.0
+    },
+    {
+      "group_customer_id": "GC-0002",
+      "customer_name": "Bau & Technik AG",
+      "is_shared_account": 1,
+      "subsidiaries_traded_with": 2,
+      "revenue_eur": 643659.0
+    },
+    {
+      "group_customer_id": "GC-0008",
+      "customer_name": "Metall Schmidt KG",
+      "is_shared_account": 0,
+      "subsidiaries_traded_with": 1,
+      "revenue_eur": 414233.0
+    },
+    {
+      "group_customer_id": "GC-0010",
+      "customer_name": "TechSolutions Ltd",
+      "is_shared_account": 0,
+      "subsidiaries_traded_with": 1,
+      "revenue_eur": 413451.0
+    },
+    {
+      "group_customer_id": "GC-0001",
+      "customer_name": "AutoTeile Rhein GmbH",
+      "is_shared_account": 1,
+      "subsidiaries_traded_with": 1,
+      "revenue_eur": 357745.0
+    }
+  ],
+  "order_backlog": [
+    {
+      "company_code": "EB",
+      "company_name": "ElektroBauteile AG",
+      "open_lines": 4,
+      "backlog_eur": 54872.0
+    },
+    {
+      "company_code": "PW",
+      "company_name": "PolymerWerk AG",
+      "open_lines": 2,
+      "backlog_eur": 24246.0
+    },
+    {
+      "company_code": "MT",
+      "company_name": "MetallTech GmbH",
+      "open_lines": 1,
+      "backlog_eur": 15096.0
+    }
+  ]
+}

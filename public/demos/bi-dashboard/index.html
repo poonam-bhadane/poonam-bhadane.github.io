@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rheinwerk Group &middot; BI &amp; Group Reporting</title>
+  <meta name="description" content="Unified group data warehouse and standardized KPI reporting across a manufacturing group of companies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">RW</div>
+      <div class="brand-text">
+        <strong>Rheinwerk Group</strong>
+        <span>BI &amp; Data Products</span>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-view="overview">
+        <span class="nav-ico">&#9632;</span> Group Overview
+      </button>
+      <button class="nav-item" data-view="companies">
+        <span class="nav-ico">&#9673;</span> By Subsidiary
+      </button>
+      <button class="nav-item" data-view="operations">
+        <span class="nav-ico">&#9881;</span> Operations
+      </button>
+      <button class="nav-item" data-view="customers">
+        <span class="nav-ico">&#9782;</span> Customers
+      </button>
+      <button class="nav-item" data-view="architecture">
+        <span class="nav-ico">&#9638;</span> Data Model
+      </button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="chip">Single source of truth</div>
+      <p>Every KPI on this page is defined once in the group warehouse and reused everywhere.</p>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="view-title">Group Overview</h1>
+        <p id="view-sub">Consolidated performance across all subsidiaries &middot; all figures in EUR</p>
+      </div>
+      <div class="topbar-right">
+        <label class="filter">
+          <span>Subsidiary</span>
+          <select id="company-filter">
+            <option value="ALL">All companies</option>
+          </select>
+        </label>
+        <div class="refreshed">
+          <span class="dot"></span>
+          <span id="refreshed-at">loading&hellip;</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- KPI cards -->
+    <section class="kpi-row" id="kpi-cards"></section>
+
+    <!-- OVERVIEW -->
+    <section class="view" id="view-overview">
+      <div class="grid">
+        <div class="card span-8">
+          <div class="card-head">
+            <h3>Revenue &amp; margin trend</h3>
+            <span class="card-note">Monthly, group-wide</span>
+          </div>
+          <div class="chart-wrap"><canvas id="chart-trend"></canvas></div>
+        </div>
+        <div class="card span-4">
+          <div class="card-head">
+            <h3>Revenue by subsidiary</h3>
+            <span class="card-note">Share of group</span>
+          </div>
+          <div class="chart-wrap"><canvas id="chart-company-share"></canvas></div>
+        </div>
+        <div class="card span-7">
+          <div class="card-head">
+            <h3>Revenue by product line</h3>
+            <span class="card-note">Standardized group taxonomy</span>
+          </div>
+          <div class="chart-wrap"><canvas id="chart-product-line"></canvas></div>
+        </div>
+        <div class="card span-5">
+          <div class="card-head">
+            <h3>Gross margin % by subsidiary</h3>
+            <span class="card-note">Profitability comparison</span>
+          </div>
+          <div class="chart-wrap"><canvas id="chart-margin"></canvas></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPANIES -->
+    <section class="view hidden" id="view-companies">
+      <div class="grid">
+        <div class="card span-12">
+          <div class="card-head">
+            <h3>Subsidiary scorecard</h3>
+            <span class="card-note">Revenue, margin, OTIF &amp; volume</span>
+          </div>
+          <div class="table-wrap"><table id="table-companies"></table></div>
+        </div>
+        <div class="card span-6">
+          <div class="card-head"><h3>Revenue by subsidiary</h3></div>
+          <div class="chart-wrap"><canvas id="chart-company-bar"></canvas></div>
+        </div>
+        <div class="card span-6">
+          <div class="card-head"><h3>Monthly revenue by subsidiary</h3></div>
+          <div class="chart-wrap"><canvas id="chart-company-trend"></canvas></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPERATIONS -->
+    <section class="view hidden" id="view-operations">
+      <div class="grid">
+        <div class="card span-6">
+          <div class="card-head">
+            <h3>On-Time-In-Full (OTIF) by subsidiary</h3>
+            <span class="card-note">Delivery reliability</span>
+          </div>
+          <div class="chart-wrap"><canvas id="chart-otif"></canvas></div>
+        </div>
+        <div class="card span-6">
+          <div class="card-head">
+            <h3>Production plan attainment</h3>
+            <span class="card-note">Actual vs planned output</span>
+          </div>
+          <div class="chart-wrap"><canvas id="chart-attainment"></canvas></div>
+        </div>
+        <div class="card span-12">
+          <div class="card-head">
+            <h3>Open order backlog</h3>
+            <span class="card-note">Value ordered but not yet delivered</span>
+          </div>
+          <div class="table-wrap"><table id="table-backlog"></table></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMERS -->
+    <section class="view hidden" id="view-customers">
+      <div class="grid">
+        <div class="card span-7">
+          <div class="card-head">
+            <h3>Top customers (group-wide)</h3>
+            <span class="card-note">After cross-subsidiary identity resolution</span>
+          </div>
+          <div class="table-wrap"><table id="table-customers"></table></div>
+        </div>
+        <div class="card span-5">
+          <div class="card-head">
+            <h3>Why identity resolution matters</h3>
+          </div>
+          <div class="explain">
+            <p>The same customer is often coded differently in each subsidiary's system:</p>
+            <div class="id-demo">
+              <div class="id-src">MetallTech<br><code>AutoTeile Rhein G.m.b.H.</code></div>
+              <div class="id-src">PolymerWerk<br><code>AutoTeile Rhein GmbH</code></div>
+              <div class="id-src">ElektroBauteile<br><code>AUTOTEILE RHEIN</code></div>
+            </div>
+            <div class="id-arrow">&darr; resolved to one group customer &darr;</div>
+            <div class="id-target"><code>GC-0001 &middot; AutoTeile Rhein GmbH</code></div>
+            <p class="muted">This lets the group see total revenue per customer across all companies, something no single subsidiary system can show.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="view hidden" id="view-architecture">
+      <div class="grid">
+        <div class="card span-12">
+          <div class="card-head">
+            <h3>From fragmented sources to one uniform warehouse</h3>
+            <span class="card-note">Extract &rarr; Transform &rarr; Load &rarr; Report</span>
+          </div>
+          <div class="flow">
+            <div class="flow-col">
+              <div class="flow-title">Source systems</div>
+              <div class="flow-box src">MetallTech GmbH<small>DE columns &middot; EUR &middot; DD.MM.YYYY</small></div>
+              <div class="flow-box src">PolymerWerk AG<small>EN columns &middot; EUR &middot; JSON</small></div>
+              <div class="flow-box src">ElektroBauteile AG<small>CHF &middot; MM/DD/YYYY</small></div>
+            </div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-col">
+              <div class="flow-title">ETL / normalization</div>
+              <div class="flow-box etl">Standardize currency &rarr; EUR</div>
+              <div class="flow-box etl">Parse &amp; unify dates</div>
+              <div class="flow-box etl">Conform dimensions</div>
+              <div class="flow-box etl">Resolve shared customers</div>
+            </div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-col">
+              <div class="flow-title">Group warehouse (star schema)</div>
+              <div class="flow-box dwh dim">dim_company</div>
+              <div class="flow-box dwh dim">dim_customer</div>
+              <div class="flow-box dwh dim">dim_product</div>
+              <div class="flow-box dwh dim">dim_date &middot; dim_plant</div>
+              <div class="flow-box dwh fact">fact_sales</div>
+              <div class="flow-box dwh fact">fact_production</div>
+            </div>
+            <div class="flow-arrow">&rarr;</div>
+            <div class="flow-col">
+              <div class="flow-title">BI &amp; reporting</div>
+              <div class="flow-box bi">Standardized KPI views</div>
+              <div class="flow-box bi">This dashboard</div>
+              <div class="flow-box bi">Tableau / Power BI</div>
+            </div>
+          </div>
+        </div>
+        <div class="card span-12">
+          <div class="card-head">
+            <h3>Warehouse contents</h3>
+            <span class="card-note">Loaded by the ETL run</span>
+          </div>
+          <div class="stat-strip" id="build-stats"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>Prototype &middot; synthetic data only</span>
+      <span>Group data warehouse &rarr; standardized KPIs &rarr; automated reporting</span>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="assets/dashboard.js"></script>
+</body>
+</html>
