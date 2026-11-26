@@ -1,0 +1,78 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { site } from '../config';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const has = (file: string) => !!file && fs.existsSync(path.join(process.cwd(), 'public', file));
+const hasPhoto = has(site.photoFile);
+const hasCv = has(site.cvFile);
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+const initials = site.name.split(' ').map((w) => w[0]).join('').slice(0, 2);
+---
+<Base>
+  <section class="hero">
+    <div class="wrap">
+      {hasPhoto
+        ? <img class="avatar" src={`${base}/${site.photoFile}`} alt={`Photo of ${site.name}`} width="168" height="168" />
+        : <div class="avatar fallback" aria-hidden="true">{initials}</div>}
+      <div>
+        <h1>{site.name}</h1>
+        <div class="role">{site.role}</div>
+        <p class="intro">{site.intro}</p>
+        <div class="actions">
+          <a class="btn primary" href={`${base}/#projects`}>See my projects</a>
+          {hasCv && <a class="btn" href={`${base}/${site.cvFile}`} download>Download CV</a>}
+          <a class="btn" href={`${base}/#contact`}>Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section id="projects">
+      <h2 class="section">Projects</h2>
+      <p class="lead">Each project opens on its own page, with what it does, how it is built, and links to the demo and code. All data in these projects is synthetic.</p>
+      <div class="grid">
+        {projects.map((p) => <ProjectCard project={p} />)}
+      </div>
+    </section>
+
+    {posts.length > 0 && (
+      <section id="blog">
+        <h2 class="section">From the blog</h2>
+        <p class="lead">Notes on what I am building and learning.</p>
+        <div class="postlist">
+          {posts.map((post) => (
+            <a class="card" href={`${base}/blog/${post.id}`}>
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+              <span class="meta">{post.data.pubDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+            </a>
+          ))}
+        </div>
+        <p style="margin-top:14px"><a href={`${base}/blog`}>All posts →</a></p>
+      </section>
+    )}
+
+    <section id="contact">
+      <h2 class="section">Contact</h2>
+      <p class="lead">Interested in working together, or want to talk about customer data? Get in touch.</p>
+      <div class="contact">
+        {site.email && <a class="btn primary" href={`mailto:${site.email}`}>{site.email}</a>}
+        {site.linkedin && <a class="btn" href={site.linkedin} rel="noopener">LinkedIn</a>}
+        {site.githubUser && <a class="btn" href={`https://github.com/${site.githubUser}`} rel="noopener">GitHub</a>}
+        {hasCv
+          ? <a class="btn" href={`${base}/${site.cvFile}`} download>Download CV (PDF)</a>
+          : <span class="btn disabled">CV coming soon</span>}
+      </div>
+    </section>
+  </main>
+</Base>
