@@ -4,7 +4,8 @@ import Base from '../../layouts/Base.astro';
 import { site } from '../../config';
 
 export async function getStaticPaths() {
-  const projects = await getCollection('projects');
+  // Tiles marked directLink open the demo directly, so they get no project page.
+  const projects = await getCollection('projects', ({ data }) => !(data.directLink && data.live));
   return projects.map((project) => ({ params: { slug: project.id }, props: { project } }));
 }
 

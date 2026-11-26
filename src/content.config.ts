@@ -15,6 +15,8 @@ const projects = defineCollection({
     live: z.string().optional(), // link to the live demo (full URL, or a path like /my-demo/)
     liveLabel: z.string().default('Open live demo'),
     repo: z.string().optional(), // GitHub repository name only, e.g. composable-cdp-prototype
+    // true = the tile opens the `live` link directly, with no project page in between
+    directLink: z.boolean().default(false),
   }),
 });
 

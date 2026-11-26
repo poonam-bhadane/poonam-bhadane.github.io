@@ -4,6 +4,8 @@ summary: "A learning project: an in-browser simulator of the Google Ads auction 
 status: prototype
 order: 6
 tags: ["SEO", "SEA", "Google Ads", "JavaScript"]
+live: "/demos/seo-sea-simulator/"
+liveLabel: "Open the simulator"
 ---
 
 ## Why I built it

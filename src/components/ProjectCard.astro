@@ -4,11 +4,16 @@ interface Props { project: CollectionEntry<'projects'>; }
 const { project } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const labels = { live: 'Live', prototype: 'Working prototype', design: 'Design and documentation' } as const;
+const d = project.data;
+const direct = d.directLink && d.live;
+const href = direct
+  ? (d.live!.startsWith('/') ? `${base}${d.live}` : d.live!)
+  : `${base}/projects/${project.id}`;
 ---
-<a class="card" href={`${base}/projects/${project.id}`}>
+<a class="card" href={href} {...(direct && !d.live!.startsWith('/') ? { target: '_blank', rel: 'noopener' } : {})}>
   <span class={`status ${project.data.status}`}>{labels[project.data.status]}</span>
   <h3>{project.data.title}</h3>
   <p>{project.data.summary}</p>
   <div class="tags">{project.data.tags.map((t) => <span class="tag">{t}</span>)}</div>
-  <span class="more">View project →</span>
+  <span class="more">{direct ? 'Open the prototype →' : 'View project →'}</span>
 </a>

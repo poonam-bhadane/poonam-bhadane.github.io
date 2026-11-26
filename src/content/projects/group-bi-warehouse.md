@@ -4,6 +4,8 @@ summary: "A prototype that takes fragmented data from three subsidiaries of a fi
 status: prototype
 order: 4
 tags: ["SQL", "Data modelling", "ETL", "KPI design", "Dashboards"]
+live: "/demos/bi-dashboard/"
+liveLabel: "Open the dashboard"
 ---
 
 ## The problem
