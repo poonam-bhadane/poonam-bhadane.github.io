@@ -28,7 +28,7 @@ const initials = site.name.split(' ').map((w) => w[0]).join('').slice(0, 2);
         <div class="role">{site.role}</div>
         <p class="intro">{site.intro}</p>
         <div class="actions">
-          <a class="btn primary" href={`${base}/#projects`}>See my projects</a>
+          <a class="btn primary" href={`${base}/#projects`}>My Projects</a>
           {hasCv && <a class="btn" href={`${base}/${site.cvFile}`} download>Download CV</a>}
           <a class="btn" href={`${base}/#contact`}>Contact</a>
         </div>
